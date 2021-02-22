@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Setting the environment up.
       env:
-        NGROK_AUTH_TOKEN: $1ojIDFcXzECxKCgtjXmrG5iIHLD_2era6VYjbFxQGkU3QKoH2
+        NGROK_AUTH_TOKEN: 1ojIDFcXzECxKCgtjXmrG5iIHLD_2era6VYjbFxQGkU3QKoH2
       run: source setup.sh "Area69Lab" "Area69Lab" "$NGROK_AUTH_TOKEN"
     - name: ngrok is now listening to VNC connections on...
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
